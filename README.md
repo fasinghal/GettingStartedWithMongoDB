@@ -19,10 +19,12 @@ This repository contains notes related to MongoDB
     This folder contains all executables to start up the server and connect to it
     Example-> mongod.exe => This starts local MongoDB database
     
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Exploring%20bin%20folder.png">
 
 - Before we execute any executable, we need to create a directory where all of our data can get stored. For this, I have created a folder  named **mongo-data** in my user directory where the data is going to get stored. 
   - This is the path we need to specify when we execute mongod.exe (We need to tell the mongo where to store the data)
 
-<img src = "" >
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Command%20to%20start%20%20server.png" >
 - By executing this command, you start up the server
+
+
