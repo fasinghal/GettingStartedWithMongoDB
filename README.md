@@ -30,3 +30,8 @@ This repository contains notes related to MongoDB
 <br>
 <img src ="https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Server%20has%20started.png">
 
+- Now, the server has started on port - 27017
+- Let's create and read data. Open another command prompt and go to bin folder insider MongoDB folder. Run **mongo.exe** This connects to local MongoDB database
+- You can try inserting data to database and try fetching inserted data for testing purpose.
+
+
