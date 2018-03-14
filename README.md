@@ -25,6 +25,8 @@ This repository contains notes related to MongoDB
   - This is the path we need to specify when we execute mongod.exe (We need to tell the mongo where to store the data)
 
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Command%20to%20start%20%20server.png" >
-- By executing this command, you start up the server
 
+- By executing this command, you start up the server
+<br>
+<img src ="https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Server%20has%20started.png">
 
