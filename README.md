@@ -197,4 +197,4 @@ MongoClient.connect(url, (err, db) => {
 
 ```
 
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Querying%20the%20data%20from%20NodeJS.png">
