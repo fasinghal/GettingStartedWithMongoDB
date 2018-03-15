@@ -152,5 +152,5 @@ Now, let's try adding one more collection - Users to TodoApp database
   });
 ```
 
-<img src = "">
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Inserting%20Users%20collection.png">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/UserCollection.jpg">
