@@ -1,5 +1,5 @@
 # Getting Started With MongoDB
-This repository contains notes related to MongoDB.
+This repository contains notes related to MongoDB. Learning to use MongoDB native driver.
 <hr>
 
 ### Installation Steps in Windows
