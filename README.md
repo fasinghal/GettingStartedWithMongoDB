@@ -269,7 +269,7 @@ Output,
 <br>
 **Using findOneAndDelete()** -> removes individual item and also returns those values. <br>
 
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/findOneAndDelete_1.png">
 
 ```
 // loading the library
@@ -296,5 +296,5 @@ MongoClient.connect(url, (err, db) => {
 ```
 
 Output,
-<img src = "">
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/InkedfindOneAndDelete_2_LI.jpg">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/findOneAndDelete_3.png">
