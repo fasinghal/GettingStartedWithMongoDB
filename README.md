@@ -154,3 +154,12 @@ Now, let's try adding one more collection - Users to TodoApp database
 
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Inserting%20Users%20collection.png">
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/UserCollection.jpg">
+<br>
+<hr>
+
+## Exploring ObjectId
+
+- ObjectId is randomly generated id used to uniquely identify every document in MongoDB databases
+- MongoDB databases can be scaled out. Scaling out means you add more database servers to handle the extra load.
+- When we use randomly generated id we don't need to constantly communicate with other database servers to check what the highest incrementing value is.
+- ObjectId is a 12 byte value where the first 4 bytes are a timestamp, next 3 bytes are machine identifiers (If 2 computers generate ObjectIds, then they will have machine identifier to ensure that id generated is unique), next 2 bytes are process id and lastly we have 3 bytes counter.
