@@ -198,3 +198,103 @@ MongoClient.connect(url, (err, db) => {
 ```
 
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Querying%20the%20data%20from%20NodeJS.png">
+
+<hr>
+
+## Deleting documents
+
+**Using deleteMany()** -> targets many documents and remove them
+<br>
+For this scenario, I have cloned one document entry thrice in the database.
+<img src = "">
+
+```
+// loading the library
+// const MongoClient = require('mongodb').MongoClient;
+const {MongoClient, ObjectID} = require('mongodb');
+
+// Connection URL (to connect to database/ URL of the location where database lives)
+const url = 'mongodb://localhost:27017/TodoApp';
+
+// Connecting to the database using MongoClient
+MongoClient.connect(url, (err, db) => {
+  if(err) {
+    return console.log('Unable to connect to MongoDB server');
+  }
+  console.log('Connected to MongoDB server.');
+
+  // deleteMany() -> targets many documents and remove them
+   db.collection('Todos').deleteMany({text:'Go to Walmart'}).then((result) => {
+     console.log(result);
+   });
+
+  // db.close();
+});
+
+```
+
+Output,
+<img src = "">
+<br>
+
+**Using deleteOne()** -> targets one documents and removes it. <br>
+For this scenario, I have cloned a document entry twice in the database<br>
+<img src = "">
+
+```
+// loading the library
+// const MongoClient = require('mongodb').MongoClient;
+const {MongoClient, ObjectID} = require('mongodb');
+
+// Connection URL (to connect to database/ URL of the location where database lives)
+const url = 'mongodb://localhost:27017/TodoApp';
+
+// Connecting to the database using MongoClient
+MongoClient.connect(url, (err, db) => {
+  if(err) {
+    return console.log('Unable to connect to MongoDB server');
+  }
+  console.log('Connected to MongoDB server.');
+
+   // deleteOne() -> targets one documents and removes it
+   db.collection('Todos').deleteOne({text:'Submit job applications'}).then((result) => {
+     console.log(result);
+   });
+
+  // db.close();
+```
+
+Output,
+<img src = "">
+<br>
+**Using findOneAndDelete()** -> removes individual item and also returns those values. <br>
+
+<img src = "">
+
+```
+// loading the library
+// const MongoClient = require('mongodb').MongoClient;
+const {MongoClient, ObjectID} = require('mongodb');
+
+// Connection URL (to connect to database/ URL of the location where database lives)
+const url = 'mongodb://localhost:27017/TodoApp';
+
+// Connecting to the database using MongoClient
+MongoClient.connect(url, (err, db) => {
+  if(err) {
+    return console.log('Unable to connect to MongoDB server');
+  }
+  console.log('Connected to MongoDB server.');
+
+   // findOneAndDelete() -> removes individual item and also returns those values
+  // targetting todos with completed: false
+  db.collection('Todos').findOneAndDelete({completed:false}).then((result) => {
+    console.log(result);
+  });
+
+  // db.close();
+```
+
+Output,
+<img src = "">
+<img src = "">
