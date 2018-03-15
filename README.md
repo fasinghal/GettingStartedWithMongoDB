@@ -36,4 +36,10 @@ This repository contains notes related to MongoDB.
 
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/mongo.exe.png">
 
+<hr>
 
+## NoSQL Database
+
+- In relational databases, we have relation/table whereas in NoSQL databases we have collection
+- In relational databases, we have rows/records whereas in NoSQL databases we have document
+- In relational databases, individual properties are called columns. It is schema based. So whatever you specify in the schema has to be present for all the records. In case of NoSQL databases, the documents in the collection don't need to have the same properties.The properties are called fields
