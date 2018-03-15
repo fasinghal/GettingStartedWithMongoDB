@@ -239,7 +239,7 @@ Output,
 
 **Using deleteOne()** -> targets one documents and removes it. <br>
 For this scenario, I have cloned a document entry twice in the database<br>
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/InkeddeleteOne_1_LI.jpg">
 
 ```
 // loading the library
@@ -265,7 +265,7 @@ MongoClient.connect(url, (err, db) => {
 ```
 
 Output,
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/InkeddeleteOne_2_LI.jpg">
 <br>
 **Using findOneAndDelete()** -> removes individual item and also returns those values. <br>
 
