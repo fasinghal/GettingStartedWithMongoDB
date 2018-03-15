@@ -133,3 +133,24 @@ In the following image,
 - Document is the data record which is inserted.
 <br>
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Document%20entry%20in%20the%20database.png">
+
+<br>
+
+Now, let's try adding one more collection - Users to TodoApp database
+
+```
+  // Inserting new record to collection - Users
+  db.collection('Users').insertOne({
+    name: 'Ankita',
+    age: 23,
+    location: 'TX'
+  }, (err, result) => {
+    if(err) {
+      return console.log('Unable to insert user', err);
+    }
+    console.log(JSON.stringify(result.ops, undefined, 2));
+  });
+```
+
+<img src = "">
+<img src = "">
