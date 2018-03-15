@@ -307,7 +307,7 @@ Output,
 - <a href= "https://docs.mongodb.com/manual/reference/operator/update/">MongoDB update operators</a>
 
 
-<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/findOneAndDelete_3.png">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Inkedupdate_1_LI.jpg">
 
 Let's try setting the completed value to true for the text 'Complete ML assignment'<br>
 
@@ -343,4 +343,5 @@ MongoClient.connect(url, (err, db) => {
 });
 
 ```
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/findOneAndUpdate_1.png">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/InkedfindOneAndUpdate_2_LI.jpg">
