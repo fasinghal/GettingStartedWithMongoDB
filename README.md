@@ -1,5 +1,10 @@
 # Getting Started With MongoDB
-This repository contains notes related to MongoDB. Learning to use MongoDB native driver.
+
+This repository contains notes related to MongoDB. 
+
+**Objectives** <br>
+- Learning to use MongoDB native driver.
+- Learning to CREATE, READ, UPDATE and DELETE documents from the collection in MongoDB
 <hr>
 
 ### Installation Steps in Windows
