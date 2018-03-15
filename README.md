@@ -298,3 +298,49 @@ MongoClient.connect(url, (err, db) => {
 Output,
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/InkedfindOneAndDelete_2_LI.jpg">
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/findOneAndDelete_3.png">
+<hr>
+
+## Updating the data i.e. updating the documents in the MongoDB collection
+
+- findOneAndUpdate() -> It lets us update an item and get the new document back.
+- <a href = "http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html#findOneAndUpdate">findOneAndUpdate(filter, update, options, callback)</a> => returns Promise if no callback passed
+- <a href= "https://docs.mongodb.com/manual/reference/operator/update/">MongoDB update operators</a>
+
+
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/findOneAndDelete_3.png">
+
+Let's try setting the completed value to true for the text 'Complete ML assignment'<br>
+
+```
+// loading the library
+// const MongoClient = require('mongodb').MongoClient;
+const {MongoClient, ObjectID} = require('mongodb');
+
+// Connection URL (to connect to database/ URL of the location where database lives)
+const url = 'mongodb://localhost:27017/TodoApp';
+
+// Connecting to the database using MongoClient
+MongoClient.connect(url, (err, db) => {
+  if(err) {
+    return console.log('Unable to connect to MongoDB server');
+  }
+  console.log('Connected to MongoDB server.');
+
+  // findOneAndUpdate() -> It lets us update an item and get the new document back.
+  // findOneAndUpdate(filter, update, options, callback) => returns Promise if no callback passed
+  db.collection('Todos').findOneAndUpdate({
+    _id: new ObjectID('5aaaed348efdc64dd438e6f1')
+  }, {
+    $set: {
+      completed: true
+    }
+  }, {
+    returnOriginal: false //returns the updated document
+  }).then((result) => {
+    console.log(result);
+  })
+  // db.close();
+});
+
+```
+<img src = "">
