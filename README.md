@@ -1,5 +1,5 @@
-# GettingStartedWithMongoDB
-This repository contains notes related to MongoDB
+# Getting Starte dWith MongoDB
+This repository contains notes related to MongoDB.
 <hr>
 
 ### Installation Steps in Windows
