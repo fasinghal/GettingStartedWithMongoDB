@@ -206,7 +206,7 @@ MongoClient.connect(url, (err, db) => {
 **Using deleteMany()** -> targets many documents and remove them
 <br>
 For this scenario, I have cloned one document entry thrice in the database.
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/InkeddeleteMany_1_LI.jpg">
 
 ```
 // loading the library
@@ -234,7 +234,7 @@ MongoClient.connect(url, (err, db) => {
 ```
 
 Output,
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/InkeddeleteMany_2_LI.jpg">
 <br>
 
 **Using deleteOne()** -> targets one documents and removes it. <br>
