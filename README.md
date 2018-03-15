@@ -4,7 +4,7 @@ This repository contains notes related to MongoDB.
 
 **Objectives** <br>
 - Learning to use MongoDB native driver.
-- Learning to CREATE, READ, UPDATE and DELETE documents from the collection in MongoDB
+- Learning to CREATE, READ, UPDATE and DELETE documents from the collection in MongoDB using MongoDB native driver library
 <hr>
 
 ### Installation Steps in Windows
