@@ -1,4 +1,4 @@
-# Getting Starte dWith MongoDB
+# Getting Started With MongoDB
 This repository contains notes related to MongoDB.
 <hr>
 
