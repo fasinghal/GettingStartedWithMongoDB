@@ -83,6 +83,7 @@ MongoClient.connect(url, (err, db) => {
 **You can give URL of the database that doesn't exist. MongoDB will form the connection but will not create a database, until we add data to it.**
 
 <br>
+## Insert Data into database
 
 **Code Snippet => Inserting a document into MongoDB database using NodeJs**
 <br>
@@ -163,3 +164,37 @@ Now, let's try adding one more collection - Users to TodoApp database
 - MongoDB databases can be scaled out. Scaling out means you add more database servers to handle the extra load.
 - When we use randomly generated id we don't need to constantly communicate with other database servers to check what the highest incrementing value is.
 - ObjectId is a 12 byte value where the first 4 bytes are a timestamp, next 3 bytes are machine identifiers (If 2 computers generate ObjectIds, then they will have machine identifier to ensure that id generated is unique), next 2 bytes are process id and lastly we have 3 bytes counter.
+
+<hr>
+
+## Fetch data from database/ Querying data from NodeJS
+
+- Collection is accessed using find(). find() returns mongodb cursor (Pointer to documents)
+
+```
+// loading the library
+const MongoClient = require('mongodb').MongoClient;
+
+// Connection URL (to connect to database/ URL of the location where database lives)
+const url = 'mongodb://localhost:27017/TodoApp';
+
+// Connecting to the database using MongoClient
+MongoClient.connect(url, (err, db) => {
+  if(err) {
+    return console.log('Unable to connect to MongoDB server');
+  }
+  console.log('Connected to MongoDB server.');
+
+  // Access the collection
+  db.collection('Todos').find().toArray().then((docs) => {
+    console.log('Todos');
+    console.log(JSON.stringify(docs, undefined, 2));
+  }, (err) => {
+    console.log('Unable to fetch todos', err);
+  });
+
+});
+
+```
+
+<img src = "">
