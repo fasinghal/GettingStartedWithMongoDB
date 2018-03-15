@@ -47,4 +47,89 @@ This repository contains notes related to MongoDB.
 
 ### Connecting to MongoDB database from inside of NodeJS application
 
+- Note: Make sure to start your mongodb server (Refer <a href = "">this</a>)
+
 - NPM module used -> node mongodb native (https://github.com/mongodb/node-mongodb-native)
+
+```
+npm install mongodb@2.2.5 --save
+```
+- MongoClient from **mongodb library** lets you connect to the mongo server and issue command to manipulate the database
+<br>
+
+**Code Snippet => Simply connecting to MongoDB database from inside of NodeJS aplication**
+
+```
+// Loading the library
+const MongoClient = require('mongodb').MongoClient;
+
+// Connection URL (to connect to database/ URL of the location where database lives)
+const url = 'mongodb://localhost:27017/TodoApp';
+
+// Connecting to the database using MongoClient
+MongoClient.connect(url, (err, db) => {
+  if(err) {
+    return console.log('Unable to connect to MongoDB server');
+  }
+
+  console.log('Connected to MongoDB server.');
+
+  // Close the connection with MongoDB Server
+  db.close();
+});
+
+```
+
+**You can give URL of the database that doesn't exist. MongoDB will form the connection but will not create a database, until we add data to it.**
+
+<br>
+
+**Code Snippet => Inserting a document into MongoDB database using NodeJs**
+<br>
+```
+// loading the library
+const MongoClient = require('mongodb').MongoClient;
+
+// Connection URL (to connect to database/ URL of the location where database lives)
+const url = 'mongodb://localhost:27017/TodoApp';
+
+// Connecting to the database using MongoClient
+MongoClient.connect(url, (err, db) => {
+  if(err) {
+    return console.log('Unable to connect to MongoDB server');
+  }
+  console.log('Connected to MongoDB server.');
+
+  // Inserting new record to collection
+  db.collection('Todos').insertOne({
+    text: 'My first to-do',
+    completed: false
+  }, (err, result) => {
+    if(err) {
+      return console.log('Unable to insert todo', err);
+    }
+
+    // result Contains the result document from MongoDB
+    // ops Contains the documents inserted with added _id fields
+    console.log(JSON.stringify(result.ops, undefined, 2));
+  });
+
+
+  // Close the connection with MongoDB Server
+  db.close();
+});
+
+```
+
+**Output of the above code snippet in command prompt**
+<br>
+<img src = "">
+<br>
+
+**Now, checking the generation of collection and document in MongoDB Compass**. <br>
+In the following image, 
+- Database Name is TodoApp
+- Collection is Todos
+- Document is the data record which is inserted.
+<br>
+<img src = "">
