@@ -123,7 +123,7 @@ MongoClient.connect(url, (err, db) => {
 
 **Output of the above code snippet in command prompt**
 <br>
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Inserting%20a%20document%20in%20MongoDB%20database.png">
 <br>
 
 **Now, checking the generation of collection and document in MongoDB Compass**. <br>
@@ -132,4 +132,4 @@ In the following image,
 - Collection is Todos
 - Document is the data record which is inserted.
 <br>
-<img src = "">
+<img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/Document%20entry%20in%20the%20database.png">
