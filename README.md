@@ -382,3 +382,11 @@ MongoClient.connect(url, (err, db) => {
   ```
   Output,
   <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/mongooseQuery_2.png">
+  <br>
+  For more information refer, http://mongoosejs.com/docs/queries.html
+  
+  <br>
+  
+  Now handling the case where, id is incorrect or it is not in the database
+  To demonstrate, I have tweaked the id in above code snippet, so the result would be
+  <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/mongooseQuery_3.png">
