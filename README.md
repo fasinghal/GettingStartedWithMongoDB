@@ -354,7 +354,7 @@ MongoClient.connect(url, (err, db) => {
 ### Using mongoose to query your data
 
   Let's consider that, we have following documents in MongoDB and we want to fetch a document with id 5ab2e99dde119c582e569820,
-  <img src = "">
+  <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/mongooseQuery_1.jpg">
   ```
       const {mongoose} = require('./../server/db/mongoose');
       const {Todo} = require('./../server/models/todo');
@@ -380,4 +380,5 @@ MongoClient.connect(url, (err, db) => {
       });
 
   ```
-  <img src = "">
+  Output,
+  <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/mongooseQuery_2.png">
