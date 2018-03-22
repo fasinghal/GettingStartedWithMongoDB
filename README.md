@@ -350,3 +350,34 @@ MongoClient.connect(url, (err, db) => {
 ```
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/findOneAndUpdate_1.png">
 <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/InkedfindOneAndUpdate_2_LI.jpg">
+
+### Using mongoose to query your data
+
+  Let's consider that, we have following documents in MongoDB and we want to fetch a document with id 5ab2e99dde119c582e569820,
+  <img src = "">
+  ```
+      const {mongoose} = require('./../server/db/mongoose');
+      const {Todo} = require('./../server/models/todo');
+
+      var id = '5ab2e99dde119c582e569820';
+
+      Todo.find({
+        _id: id
+      }).then((todos) => {
+        console.log('Todos using find()', todos);
+      });
+
+      // To be used when you want to find one document by something other than ID
+      Todo.findOne({
+        _id: id
+      }).then((todo) => {
+        console.log('Todo using findOne()', todo);
+      });
+
+      // To look for a document just by identifier
+      Todo.findById(id).then((todo) => {
+        console.log('Todo by ID', todo);
+      });
+
+  ```
+  <img src = "">
