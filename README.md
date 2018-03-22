@@ -387,6 +387,69 @@ MongoClient.connect(url, (err, db) => {
   
   <br>
   
-  Now handling the case where, id is incorrect or it is not in the database
+  **Now handling the case where, id is incorrect or it is not in the collection**
   To demonstrate, I have tweaked the id in above code snippet, so the result would be
   <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/mongooseQuery_3.png">
+  
+  Now here, we can observe that, the result returned is either empty array or null value when the id does not match anything in the database. This implies that, the error is not going to get thrown as it is still firing the success case either with empty array or null and therefore we have to handle the case in our code where id doesn't match.
+  
+  ```
+    Todo.findById(id).then((todo) => {
+    // Handling the case where id doesn't match
+        if(!todo) {
+          return console.log('Id not found');
+        }
+      console.log('Todo by ID', todo);
+    });
+  ```
+  
+  **Now validating the case where ID is invalid**
+    - In order to validate object ID we can try catch block
+    - To demonstrate this case, I have appended few digits to existing object id
+      
+      **Method 1**
+      
+      ```
+        var id = '5ab2e99dde119c582e569820888';
+
+        Todo.findById(id).then((todo) => {
+          if(!todo) {
+            return console.log('Id not found');
+          }
+          console.log('Todo by ID', todo);
+         }).catch((e) => {
+            console.log(e);
+        });
+      
+      ```
+   Output,
+   <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/mongooseQuery_invalidID.jpg">
+   
+   Hence, above error states that the id that you are trying to find doesn't exist.
+   
+   **Method 2**<br>
+   With the help of MongoDB native driver
+   
+   ```
+   const {ObjectID} = require('mongodb');
+   
+   var id = '5ab2e99dde119c582e569820888';
+
+    if(!ObjectID.isValid(id)) {
+      console.log('ID not valid');
+    }
+    
+    Todo.findById(id).then((todo) => {
+      if(!todo) {
+        return console.log('Id not found');
+      }
+      console.log('Todo by ID', todo);
+      }).catch((e) => {
+        console.log(e);
+      });
+   ```
+   Output,
+   <img src = "https://github.com/patilankita79/GettingStartedWithMongoDB/blob/master/Screenshots/mongooseQueryValidation_2.jpg">
+      
+  
+  
